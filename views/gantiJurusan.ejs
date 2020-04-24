@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/link-bs') %>
+    <title>Ganti Jurusan</title>
+</head>
+<body>
+    <%- include('./partials/nav-bar') %>
+    <div class ='container'>
+    <h1>List Jurusan</h1>
+
+    <table class= 'table table-bordered'>
+        <thead>
+            <tr>
+                <td>JURUSAN</td>
+                <td>TANGGAL MULAI</td>
+                <td>BATCH / ANGKATAN</td>
+                <td>ACTION</td>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let i = 0; i < jurusan.length; i++){%>
+                <tr>
+                    <td><%=jurusan[i].name %>  </td>
+                    <td><%=jurusan[i].startDate %>  </td>
+                    <td><%=jurusan[i].batch %>  </td>
+                    <td><button><a href="/updateJurusan/<%=jurusan[i].id%>/<%=student.id%>">Ganti Jurusan</a></button></td>
+ 
+                </tr>
+
+            <%}%>
+           
+        </tbody>
+    </table>
+</div>
+  
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('./partials/link-bs') %>
+    <style>
+        h3{
+            color: blue
+        }
+    </style>
+    <title>my class page</title>
+</head>
+<body>
+    <%-include('./partials/nav-bar') %>
+    <div class = 'container'>
+    <h1>My Class</h1>
+     <h3>HI <%=student.fullName()%></h3>
+    <h3>Anda terdaftar di</h3>
+    <table class ='table table-bordered'>
+        <thead>
+            <tr>
+                <td>NAMA PROGRAM / JURUSAN</td>
+                <td>BATCH</td>
+                <td>TANGGAL MULAI</td>
+                <td colspan="3">ACTION</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%=student.Jurusan.name %></td>
+                <td><%=student.Jurusan.batch%></td>
+                <td><%=student.Jurusan.startDate%></td>
+                <td><button><a href="/lihatJadwal/<%=student.Jurusan.id%>/<%=student.id%>">LIHAT JADWAL</a></button></td>
+                <td><button><a href="/gantiJurusan/<%=student.id%>">GANTI JURUSAN</a></button></td>
+                <td><button onclick="return confirm('Apakah anda yakin mau menghapus data ini?')">  <a href="/hapus/<%=student.id%>">BATAL</a></button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+    
+</body>
+</html>

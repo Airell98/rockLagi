@@ -1,0 +1,32 @@
+
+
+//createAccount
+name
+tanggallahir
+password
+email
+tombol login dan cancel
+
+//login
+
+name
+password
+
+
+//main page 
+//navbar
+-registrasi(halaman)
+-Cek Jurusan(berupa layar isinya many to many jurusan materi)
+-About Us
+-Contact Us
+
+
+
+// ISI cek 
+-namaJurusan startDate    batch   Action(check Materies)
+
+
+//admin
+
+login
+Jurusan(klo di klik keluar semua murid di jurusan tersebut)

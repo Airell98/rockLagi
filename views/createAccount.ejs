@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% if(error){ %>
+<p><%= error %>  </p>
+<%}%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./partials/link-bs')%>
+    <title>home page</title>
+</head>
+<body>
+    <%- include('./partials/nav-bar')%>
+
+<div class = 'container'>
+    <h1>Create Account</h1>
+    <form action="/registrasi" method="POST">
+        <label>First Name: </label><br>
+        <input type="text" name="firstName"><br><br>
+        
+        <label>Last Name: </label><br>
+        <input type="text" name="lastName"><br><br>
+
+        <label>Username: </label><br>
+        <input type="text" name="userName"><br><br>
+        
+        <label>Tanggal Lahir</label><br>
+        <input type="text" name="tanggal_lahir"><br><br>
+        
+        <label>Password</label><br>
+        <input type="text" name="password"><br><br>
+
+        <label>email</label><br>
+        <input type="text" name="email"><br><br>
+        
+        <button type="submit">Create</button>
+        <button><a href="/mainPage">Cancel</a></button>
+    </form>
+
+</div>
+    
+    
+</body>
+</html>
